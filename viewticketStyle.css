@@ -1,0 +1,50 @@
+h1{
+    padding-left: 200px;
+}
+
+
+body {
+    background-image: url("Moss.jpg");
+    font-family: "Helvetica Neue", Helvetica, Arial;
+    padding-top: 100px;
+    padding-left: 400px;
+    background-size: cover;
+}
+
+.tableCont,.tableCont2{
+    width: 600px;
+    max-width: 600px;
+    margin: 0 auto;
+      
+}
+
+.tableCont a,.tableCont2 a{
+    text-decoration: underline;
+    margin-left: 500px;
+}
+#list_table th,#list_table2 th{
+    text-align: center;
+    -ms-text-size-adjust: auto;
+    border-collapse: collapse;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+#list_table td,#list_table2 td{
+    text-align: center;
+    -ms-text-size-adjust: auto;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.tableCont,.tableCont2 {
+    margin: 10px 10px 10px 10px;
+    background: #fff;
+    box-shadow: 
+        0px 0px 0px 5px rgba( 255,255,255,0.4 ), 
+        0px 4px 20px rgba( 0,0,0,0.33 );
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    display: table;
+    position: static;
+}

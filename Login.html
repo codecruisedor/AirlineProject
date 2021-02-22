@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="LoginStyle.css">
+        
+    </head>
+    <body>
+        
+        <div class ="container3">
+            <form onsubmit="return isuccess()" id = "login" action="bookOrView.html">
+            <div class = "header">
+                <h3>Login</h3>
+                <p>Enter uname and password</p>
+            </div>
+            <div class="sep"></div>
+            <div class ="input">
+                <input id = "uname" type="text" placeholder="User Name"  autofocus/>
+                <input id = "pass" type="password" placeholder="Password" />
+                <button  id="submit">LOGIN</button>
+             </div>
+             </form>
+        </div>
+        
+        <script>
+            var uname=document.getElementById("uname");
+            var pass=document.getElementById("pass");
+            var isLogin = false;
+            
+            function isuccess() {
+                
+            
+            if(uname.value==""||pass.value==""){
+                    alert("Please fill all the details ");
+                    return false;
+                }
+            
+            else{
+                isLogin = true;
+                return true;
+            }
+                    
+            }
+        
+            
+        </script>
+
+    </body>
+</html>

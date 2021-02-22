@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!--
+
+-- 
+PNR NO
+Travel Data
+Source
+Destination
+Status
+Seat pref 
+Meal pref
+Book Ticket
+-->
+<html>
+    <head>
+        <link rel="stylesheet" href="bookTicketStyle.css">
+    </head>
+    <body>
+        <div class ="container4">
+            <form onsubmit="return actions()" id = "bookTicket" action="succesdisplay2.html">
+                <div class = "header2">
+                    <h3>Book Ticket</h3>
+                    <p>Fill the details</p>
+                </div>
+                <div class="sep"></div>
+                <div class = "inputs">
+                    <p id = "pnrno" style="background-color: #f5f5f5;padding: 13px 10px;box-shadow: inset 0px 2px 3px rgb(0 0 0 / 10%);width: 330px; opacity: 0.5" ></p>
+                    <input class="textbox-n" id = "TravelDate" type="date" placeholder="Select Date"  autofocus/>
+                    <input id = "source" type="text" placeholder="From" />
+                    <input id = "destination" type="text" placeholder="To" />
+                    <div class="dropdown">
+                    <label for="statuschoose">Status:</label>
+
+                        <select name="Status" id="statusChoose">
+                            <option value="New">New</option>
+                            <option value="Hold">Hold</option>
+                            <option value="Confirm">Confirm</option>
+                        
+                        </select>
+                    <label for="seatpref">Seat Preference:</label>
+
+                        <select name="SPref" id="spref">
+                            <option value="window">Window</option>
+                            <option value="MiddleAisle">Middle Aisle</option>
+                        
+                        
+                        </select>
+                   
+                    <label for="mealpref">Meal Preference:</label>
+
+                        <select name="MPref" id="mpref">
+                            <option value="veg">Veg</option>
+                            <option value="nveg">Non Veg.</option>
+                        
+                        
+                        </select>
+                    </div>
+                    
+                    <button  id="book">BOOK TICKET</button>
+            
+                    </div>
+                </form>
+        </div>
+        <script>
+            document.getElementById("pnrno").innerHTML=Math.floor(Math.random() * (9999999 - 1000000 + 1) ) + 1000000 ;
+            var tdate=document.getElementById("TravelDate");
+            var source=document.getElementById("source");
+            var dest=document.getElementById("destination");
+            var status=document.getElementById("statusChoose");
+            var seat=document.getElementById("spref");
+            var meal=document.getElementById("mpref");
+            
+            function actions() {
+            
+            if(tdate.value==""||source.value==""||dest.value==""||status.value==""||seat.value==""||meal.value==""){
+                    alert("Please fill all the details ");
+                    return false;
+                }
+            else{
+                    return true;
+                    
+            }
+        }
+            
+        </script>
+
+    </body>
+
+</html>
